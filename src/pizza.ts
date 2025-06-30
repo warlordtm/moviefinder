@@ -5,7 +5,7 @@ type Order = {
 }
 
 type Pizza = {
-  id?: number
+  id: number
   name: string,
   price: number 
 }
