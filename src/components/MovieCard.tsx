@@ -21,7 +21,7 @@ function MovieCard({title, year, image})
         </div>
       </div>
       <div className='favourite'>
-        <img src='/src/assets/react.svg'/>
+        ❤️
       </div>
     </section>
   )
