@@ -1,24 +1,42 @@
 import '/src/styles/Search.css'
 import React from 'react'
-import movieData from './data/movieData'
 import MovieCard from './MovieCard'
+import search_movies from '../api/tmdb.ts'
+
 
 function Search()
 {
 
-  const [movie_results, set_movie_results] = React.useState("") 
+    type Movie = {
+    id: number;
+    title: string;
+    poster_path: string;
+    release_date?: string;
+  };
+
 
   const [query, set_query] = React.useState("")
+  const [movie_results, set_movie_result] = React.useState<Movie[]>([])
 
-  const query_match = movieData.filter(movie => movie.movie_title.toLowerCase().includes(query.toLowerCase()))
-
-  const movie_card = query_match.map( data => 
+  React.useEffect(function()
+  {
+    async function get_movies()
     {
-      return <MovieCard key={data.id} title = {data.movie_title} image = {data.movie_img} year = {data.movie_year}/>
+      const results = await search_movies(query)
+      set_movie_result(results)
+    }
+
+    get_movies()
+
+    console.log(movie_results)
+  },[query])
+
+
+  const movie_card = movie_results.map( data => 
+    {
+      return <MovieCard key={data.id} title = {data.title} image={`https://image.tmdb.org/t/p/w500${data.poster_path}`} year={data.release_date?.slice(0, 4) || 'N/A'}/>
     })
 
-    console.log(movie_card)
-    console.log(movie_card.length)
   return(
     <main className='main'>
       <section className='search-section'>

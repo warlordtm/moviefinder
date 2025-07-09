@@ -1,7 +1,7 @@
 import '/src/styles/App.css'
 import Header from './Header'
 import Search from './Search'
-import movieData from './data/movieData'
+import movieData from '../api/movieData'
 import React from 'react'
 
 function App() 

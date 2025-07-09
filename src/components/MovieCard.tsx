@@ -2,12 +2,11 @@ import '/src/styles/MovieCard.css'
 
 function MovieCard({title, year, image})
 {
-  console.log({title, year, image})
   return (
     <section>
       <div className='movie-card'>
         <div className='img-div'>
-          <img src='/src/assets/image.jpg' alt='movie image'/>
+          <img src={image} alt='movie image'/>
         </div>
         <div className='movie-details'>
           <div>
