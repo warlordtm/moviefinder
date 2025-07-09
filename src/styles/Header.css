@@ -1,0 +1,20 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.775rem;
+  font-weight: bold;
+  color: blue;
+  background-color: black;
+}
+
+.link-div{
+  display: flex;
+  justify-content: space-between;
+  width: 8rem;
+}
+
+.link{
+  font-weight: 600;
+  font-size: small;
+}

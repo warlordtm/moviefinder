@@ -1,9 +1,11 @@
+/* //TYPE FOR ORDER
 type Order = {
   id: number,
   pizza: string,
   status: "ordered" | "completed"
 }
 
+//TYPE FOR PIZZA
 type Pizza = {
   id: number
   name: string,
@@ -13,6 +15,7 @@ type Pizza = {
 const menu: Array<Pizza> = []
 
 let cashInRegister: number = 100
+console.log(cashInRegister)
 
 const orderQueue: Array<Order> = []
 
@@ -21,6 +24,7 @@ let orderId: number = 1
 
 
 
+//FUNCTION TO ADD NEW PIZZA TO THE MENU ARRAY
 function addNewPizza(pizzaObj: Omit<Pizza, "id">) : Pizza
 {
   const newPizza : Pizza = { id: nextPizzaId++, ...pizzaObj}
@@ -30,9 +34,11 @@ function addNewPizza(pizzaObj: Omit<Pizza, "id">) : Pizza
 
 
 
+//FUCNTION TO PLACE AN ORDER AND RETURN AN ARRAY OF ORDERED PIZZA'S
 function placeOrder(pizzaName: string) : Order | undefined
 {
   const selectedPizza = menu.find(pizza => pizza.name === pizzaName)
+  console.log(selectedPizza)
   const newOrder  : Order = {id: orderId++, pizza: pizzaName, status: "ordered"}
   orderQueue.push(newOrder)
   return newOrder
@@ -40,6 +46,7 @@ function placeOrder(pizzaName: string) : Order | undefined
 
 
 
+//FUNCTION TO COMPLETE AN ORDER AFTER BEING PLACED
 function completeOrder(orderId: number) : Order | undefined
 {
   let completedOrder = orderQueue.find(selectedId => selectedId.id === orderId)
@@ -52,6 +59,7 @@ function completeOrder(orderId: number) : Order | undefined
 
 
 
+//FUNCTION TO GET THE PIZZA DETAILS AVAILABLE IN THE PIZZA MENU ARRAY
 function getPizzaDetail(identifier: string | number) : Pizza | undefined
 {
   if(typeof identifier === "string")
@@ -93,3 +101,4 @@ completeOrder(3)
 getPizzaDetail("pizza")
 getPizzaDetail(1)
 getPizzaDetail(3)
+ */

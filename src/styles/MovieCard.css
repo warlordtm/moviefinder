@@ -1,0 +1,55 @@
+.movie-card{
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 9px;
+  margin-left: .5rem;
+  margin-bottom: .5rem;
+  background-color: rgb(87, 87, 218);
+  cursor: pointer;
+}
+
+.movie-card:hover{
+  background-color: rgb(127, 127, 226);
+}
+
+.movie-card:active{
+  background-color: rgb(148, 148, 231);
+}
+
+.movie-year, .movie-title{
+  font-size: smaller;
+  padding: 0;
+  margin: 0;
+}
+
+section{
+  position: relative;
+}
+
+.img-div, .img-div > img{
+  width: 100%;
+} 
+
+.img-div > img {
+  object-fit: cover;
+}
+
+.movie-details{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.favourite{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.favourite:hover{
+  cursor: pointer;
+}
