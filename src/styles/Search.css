@@ -1,71 +1,103 @@
-p{
+p {
   margin: 0;
   padding: 0;
 }
 
-.search-section{
+.search-section {
   display: flex;
   flex-direction: column;
   width: 28rem;
   justify-content: center;
   align-items: center;
+  background-color: #1f1f1f; 
+  padding: 2rem;
+  border-radius: 1rem;
 }
 
-img{
+
+img {
   margin-top: 1.2rem;
   margin-bottom: 1.2rem;
   width: 60%;
 }
 
-p{
+
+p {
   font-size: 2rem;
   font-weight: bold;
-  color: white;
+  color: #f1f1f1;
   margin-bottom: 1rem;
   text-align: center;
 }
 
-span{
-  color: rgb(85, 85, 184);
+
+span {
+  color: blue; 
 }
 
-.search-div{
+.search-div {
   width: 20rem;
   display: flex;
   justify-content: space-between;
+  gap: 0.5rem;
 }
 
-input{
-  background-color:rgb(85, 85, 184);
-  padding: 0.35rem 0.287rem;
-  border-radius: 0.15em;
-  font-size: 0.69rem;
-  color: white;
-  width: 135%;
-  align-content: center;
-}
 
-input::placeholder{
-  color: rgba(255, 255, 255, 0.644);
-}
-
-button{
-  padding: 0.185rem 1rem;
-  background-color: rgb(190, 141, 17);
-  color: white;
-  border-radius: 0.15em;
+input {
+  background-color: #2a2a2a;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.3rem;
   font-size: 0.9rem;
-  cursor: pointer;
-  width: 30%;
+  color: white;
+  border: 1px solid blue;
+  flex: 1;
+}
+
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 0.9rem;
   font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
-button:hover{
-  background-color: rgb(194, 148, 33);
-  color: white;
+
+button:hover {
+  background-color: #f6121d;
 }
 
-button:active{
-  background-color: rgb(219, 169, 42);
-  color: white;
+button:active {
+  background-color: #a9060f;
+}
+
+
+.no-results {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #b3b3b3;
+  margin-top: 2rem;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
