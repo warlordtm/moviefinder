@@ -1,7 +1,6 @@
 import '/src/styles/App.css'
 import Header from './Header'
 import Search from './Search'
-import movieData from '../api/movieData'
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Favourites from './Favourites'

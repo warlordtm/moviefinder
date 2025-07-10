@@ -1,12 +1,12 @@
 .movie-details-page {
   max-width: 800px;
-  margin: 2rem auto;
   padding: 1rem;
   text-align: center;
   color: #fff;
   background-color: #1e1e1e;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  margin-top: 4.67rem;
 }
 
 .movie-details-page h2 {
