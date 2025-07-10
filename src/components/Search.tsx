@@ -23,6 +23,24 @@ function Search()
   const [is_loading, set_is_loading] = React.useState(false)
   const [error, set_error] = React.useState("")
 
+  const [favourite, set_favourite] = useState<Movie[]>(() => {
+    const stored = localStorage.getItem('favourite')
+    return stored ? JSON.parse(stored) : []
+})
+
+
+  React.useEffect(() => {
+    const stored = localStorage.getItem('favourite');
+    if (stored) {
+      set_favourite(JSON.parse(stored));
+    }
+  }, []);
+
+
+  React.useEffect(() => {
+    localStorage.setItem("favourite", JSON.stringify(favourite))
+  }, [favourite])
+
   React.useEffect(function()
   {
     set_is_loading(true)
@@ -62,10 +80,28 @@ function Search()
     }
   },[debounced_query])
 
+  function toggle_favourite(movie: Movie) {
+    const isAlreadyFavourited = favourite.some(fav => fav.id === movie.id)
+
+    if (isAlreadyFavourited) {
+      set_favourite(prev => prev.filter(fav => fav.id !== movie.id))
+    } else {
+      set_favourite(prev => [...prev, movie])
+    }
+  }
+
+
 
   const movie_card = movie_results.map( data => 
     {
-      return <MovieCard key={data.id} title = {data.title} image={`https://image.tmdb.org/t/p/w500${data.poster_path}`} year={data.release_date?.slice(0, 4) || 'N/A'}/> 
+      return <MovieCard
+        key={data.id}
+        title={data.title}
+        image={`https://image.tmdb.org/t/p/w500${data.poster_path}`}
+        year={data.release_date?.slice(0, 4) || 'N/A'}
+        isFavourite={favourite.some(fav => fav.id === data.id)}
+        onToggleFavourite={() => toggle_favourite(data)}
+      />
     })
 
   return(
@@ -85,7 +121,6 @@ function Search()
       )}
 
       {error && !is_loading && <p className="error">{error}</p>}
-
     </main>
     
   )

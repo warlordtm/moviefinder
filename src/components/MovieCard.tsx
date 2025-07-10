@@ -1,6 +1,14 @@
 import '/src/styles/MovieCard.css'
+type MovieCardProps = {
+  title: string;
+  image: string;
+  year: string;
+  isFavourite: boolean;
+  onToggleFavourite: () => void;
+}
 
-function MovieCard({title, year, image})
+
+function MovieCard({title, year, image, isFavourite, onToggleFavourite}: MovieCardProps)
 {
   return (
     <section>
@@ -19,9 +27,10 @@ function MovieCard({title, year, image})
           </div>
         </div>
       </div>
-      <div className='favourite'>
-        ❤️
+      <div className="favourite" onClick={onToggleFavourite}>
+        {isFavourite ? '❤️' : '🤍'}
       </div>
+
     </section>
   )
 }

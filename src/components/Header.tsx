@@ -1,15 +1,17 @@
 import '/src/styles/Header.css'
+import { Link } from 'react-router-dom'
+
 
 function Header()
 {
   return (
     <header className='header'>
       <div>
-        <a href='#'>MovieFinder</a>
+        <Link to="/">MovieFinder</Link>
       </div>
       <div className="link-div">
-        <a className="link" href='#'>Home</a>
-        <a className="link" href='#'>Favourites</a>
+        <Link className="link" to="/">Home</Link>
+        <Link className="link" to="/favourites">Favourites</Link>
       </div>
     </header>
   )
