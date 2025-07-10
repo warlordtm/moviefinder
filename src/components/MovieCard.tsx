@@ -1,4 +1,6 @@
 import '/src/styles/MovieCard.css'
+import { Link } from 'react-router-dom'
+
 type MovieCardProps = {
   title: string;
   image: string;
@@ -7,12 +9,17 @@ type MovieCardProps = {
   onToggleFavourite: () => void;
 }
 
-
 function MovieCard({title, year, image, isFavourite, onToggleFavourite}: MovieCardProps)
 {
+  function get_movie_details()
+  {
+    console.log("clicked")
+  }
+
   return (
     <section>
-      <div className='movie-card'>
+      <Link to="/movie-details" state={{ title, image, year, isFavourite }}>
+        <div className='movie-card' onClick={() => get_movie_details()}>
         <div className='img-div'>
           <img src={image} alt='movie image'/>
         </div>
@@ -27,6 +34,8 @@ function MovieCard({title, year, image, isFavourite, onToggleFavourite}: MovieCa
           </div>
         </div>
       </div>
+      </Link>
+      
       <div className="favourite" onClick={onToggleFavourite}>
         {isFavourite ? '❤️' : '🤍'}
       </div>

@@ -36,7 +36,6 @@ function Search()
     }
   }, []);
 
-
   React.useEffect(() => {
     localStorage.setItem("favourite", JSON.stringify(favourite))
   }, [favourite])

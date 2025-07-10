@@ -5,6 +5,7 @@ import movieData from '../api/movieData'
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Favourites from './Favourites'
+import MovieDetails from './MovieDetails'
 
 function App() 
 {
@@ -13,7 +14,8 @@ function App()
         <Header/>
         <Routes>
           <Route path='/' element={<Search/>}/>
-          <Route path='/Favourites' element={<Favourites/>}/>
+          <Route path='/favourites' element={<Favourites/>}/>
+          <Route path='/movie-details' element={<MovieDetails/>}/>
         </Routes>
     </div>
   )
