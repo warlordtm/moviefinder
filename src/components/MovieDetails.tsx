@@ -13,7 +13,7 @@ export default function MovieDetails() {
       <div className="movie-details">
         <h2><strong>TITLE: </strong>{title}</h2>
         <p className="movie-release-year"><strong>RELEASED: </strong> {year}</p>
-        <p className="movie-rating"><strong>RATING: ⭐ </strong> {`${rating.split('')[0]}.${rating.split('')[2]}`}</p>
+        <p className="movie-rating"><strong>RATING: ⭐ </strong> {Math.round(rating * 10)/10}</p>
         <p className="movie-overview"><strong>DESCRIPTION: </strong>{overview}</p>
         <p className="favourite-icon">{isFavourite ? '❤️ In favourites' : '🤍 Not in favourites'}</p>
       </div>

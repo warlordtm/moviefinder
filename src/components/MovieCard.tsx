@@ -7,7 +7,7 @@ type MovieCardProps = {
   year: string;
   isFavourite: boolean;
   onToggleFavourite: () => void;
-  rating: string
+  rating: number
   overview: string
   language: string
 }
@@ -27,8 +27,8 @@ function MovieCard({title, year, image, isFavourite, rating, language, overview,
               <p className='movie-title'>{title}</p>
             </div>
             <div className='movie-attributes'>
-              <div>⭐ {`${rating.split('')[0]}.${rating.split('')[2]}`} </div>
-              <div>. {`${language.split('')[0].toUpperCase()}${language.split('')[1].toLowerCase()}`} .</div>
+              <div>⭐ {Math.round(rating * 10)/10} </div>
+              <div>• {`${language.split('')[0].toUpperCase()}${language.split('')[1].toLowerCase()}`} •</div>
               <div>{year}</div>
             </div>
           </div>
