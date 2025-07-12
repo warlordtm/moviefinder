@@ -104,7 +104,7 @@ function Search()
         isFavourite={favourite.some(fav => fav.id === data.id)}
         onToggleFavourite={() => toggle_favourite(data)}
         overview={data.overview}
-        rating={data.vote_average.toString()}
+        rating={data.vote_average}
         language={data.original_language}
       />
     })
