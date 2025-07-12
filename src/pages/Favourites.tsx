@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import MovieCard from '../components/MovieCard'
 import '/src/styles/Favourites.css'
 
@@ -31,6 +31,9 @@ function Favourites() {
               year={movie.release_date?.slice(0, 4) || 'N/A'}
               isFavourite={true}
               onToggleFavourite={() => toggleFavourite(movie)}
+              overview={movie.overview}
+              rating={movie.vote_average.toString()}
+              language={movie.original_language}
             />
           ))
         ) : (
