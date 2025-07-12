@@ -2,8 +2,18 @@ import { useEffect, useState } from 'react'
 import MovieCard from '../components/MovieCard'
 import '/src/styles/Favourites.css'
 
+type Movie = {
+  id: number
+  title: string
+  poster_path: string
+  release_date?: string
+  overview: string
+  vote_average: number
+  original_language: string
+}
+
 function Favourites() {
-  const [favourites, setFavourites] = useState(() => {
+  const [favourites, setFavourites] = useState<Movie[]>(() => {
     const stored = localStorage.getItem('favourite')
     return stored ? JSON.parse(stored) : []
   })
@@ -14,7 +24,7 @@ function Favourites() {
   }, [favourites])
 
   
-  function toggleFavourite(movie: any) {
+  function toggleFavourite(movie: Movie) {
     setFavourites(prev => prev.filter(fav => fav.id !== movie.id))
   }
 
