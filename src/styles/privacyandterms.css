@@ -1,0 +1,26 @@
+.privacy, .terms{
+  margin-top: 4rem;
+  font-size: 1rem;
+  color: white;
+  margin-left: 2rem;
+}
+
+.privacy h2, .terms h2{
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.privacy p, .terms p{
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: left;
+  margin: .4rem;
+  margin-bottom: 1rem;
+}
+
+.span{
+  font-weight: 900;
+}
+

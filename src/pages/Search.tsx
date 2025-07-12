@@ -1,7 +1,7 @@
 import '/src/styles/Search.css'
 import React, { useState } from 'react'
-import MovieCard from './MovieCard'
-import { search_movies, get_popular_movies } from '../api/tmdb'
+import MovieCard from '../components/MovieCard';
+import { search_movies, get_popular_movies } from '../services/tmdb'
 import { useDebounce } from '../hooks/useDebounce';
 
 
@@ -14,6 +14,9 @@ function Search()
     title: string;
     poster_path: string;
     release_date?: string;
+    overview: string
+    vote_average: number
+    original_language: string
   };
 
 
@@ -100,6 +103,9 @@ function Search()
         year={data.release_date?.slice(0, 4) || 'N/A'}
         isFavourite={favourite.some(fav => fav.id === data.id)}
         onToggleFavourite={() => toggle_favourite(data)}
+        overview={data.overview}
+        rating={data.vote_average.toString()}
+        language={data.original_language}
       />
     })
 

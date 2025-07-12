@@ -1,17 +1,13 @@
 import '/src/styles/Header.css'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
-
-function Header()
-{
+function Header() {
   return (
     <header className='header'>
-      <div>
-        <Link to="/">MovieFinder</Link>
-      </div>
+      <div className="logo">🎬 MovieFinder</div>
       <div className="link-div">
-        <Link className="link" to="/">Home</Link>
-        <Link className="link" to="/favourites">Favourites</Link>
+        <NavLink to="/" className={({ isActive }) => isActive ? "link active" : "link"}>Home</NavLink>
+        <NavLink to="/favourites" className={({ isActive }) => isActive ? "link active" : "link"}>Favourites</NavLink>
       </div>
     </header>
   )

@@ -1,4 +1,4 @@
-.header{
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,22 +9,38 @@
   position: fixed;
   z-index: 100;
   width: 100%;
-  top: 0px;
+  top: 0;
 }
 
-.link-div{
+.logo {
+  font-size: .9rem;
+  font-weight: 700;
+  color: blue;
+}
+
+.link-div {
   display: flex;
-  justify-content: space-between;
-  width: 8rem;
-  gap: 0.83rem;
+  gap: 1rem;
 }
 
-.link{
+.link {
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  color: blue;
+  text-decoration: none;
+  position: relative;
 }
 
-.link:hover{
+.link:hover {
   color: rgba(255, 255, 255, 0.562);
 }
 
+.link.active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: rgb(255, 0, 0);
+  left: 0;
+  bottom: -2px;
+}

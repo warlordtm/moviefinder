@@ -23,5 +23,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src", "src/api/tmdb.ts"]
+  "include": ["src", "src/Services/tmdb.ts"]
 }

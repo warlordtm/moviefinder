@@ -3,18 +3,20 @@ import '../styles/MovieDetails.css'
 
 export default function MovieDetails() {
   const location = useLocation()
-  const { title, image, year, isFavourite, rating, description} = location.state || {}
+  const { title, image, year, isFavourite, rating, overview} = location.state || {}
 
   return (
     <section className="movie-details-page">
-      <h2>{title}</h2>
-      <img src={image} alt={title} />
-      <p>Released: {year}</p>
-      <div>
-        <p>7.7 rating</p>
+      <div className="movie-img-div">
+        <img src={image} alt={title} />
       </div>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem optio nisi, doloribus tenetur minima, hic aliquam vero incidunt voluptate id sunt, facilis aperiam expedita omnis! Harum reiciendis iste explicabo neque.</p>
-      <p>{isFavourite ? '❤️ In favourites' : '🤍 Not in favourites'}</p>
+      <div className="movie-details">
+        <h2><strong>TITLE: </strong>{title}</h2>
+        <p className="movie-release-year"><strong>RELEASED: </strong> {year}</p>
+        <p className="movie-rating"><strong>RATING: ⭐ </strong> {`${rating.split('')[0]}.${rating.split('')[2]}`}</p>
+        <p className="movie-overview"><strong>DESCRIPTION: </strong>{overview}</p>
+        <p className="favourite-icon">{isFavourite ? '❤️ In favourites' : '🤍 Not in favourites'}</p>
+      </div>
     </section>
   )
 }
