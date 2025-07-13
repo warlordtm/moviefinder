@@ -10,10 +10,11 @@
   z-index: 100;
   width: 100%;
   top: 0;
+  flex-wrap: wrap;
 }
 
 .logo {
-  font-size: .9rem;
+  font-size: 1rem;
   font-weight: 700;
   color: blue;
 }
@@ -25,14 +26,14 @@
 
 .link {
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: blue;
   text-decoration: none;
   position: relative;
 }
 
 .link:hover {
-  color: rgba(255, 255, 255, 0.562);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .link.active::after {
@@ -40,7 +41,32 @@
   position: absolute;
   width: 100%;
   height: 2px;
-  background: rgb(255, 0, 0);
+  background: red;
   left: 0;
   bottom: -2px;
+}
+
+/* 🔁 Responsive tweaks */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .link-div {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .link {
+    font-size: 1rem;
+    padding: 0.4rem 0;
+  }
 }
