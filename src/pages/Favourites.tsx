@@ -29,7 +29,7 @@ function Favourites() {
   }
 
   return (
-    <main className="main">
+    <main className="main max-md:mt-40">
       <h1 className='h1'>Your Favourites</h1>
       <section className="movie-card-section">
         {favourites.length > 0 ? (

@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import MovieCard from '../components/MovieCard';
 import { search_movies, get_popular_movies } from '../services/tmdb'
 import { useDebounce } from '../hooks/useDebounce';
+import '../styles/Pagination.css'
 
 
 
@@ -25,6 +26,8 @@ function Search()
   const [movie_results, set_movie_result] = React.useState<Movie[]>([])
   const [is_loading, set_is_loading] = React.useState(false)
   const [error, set_error] = React.useState("")
+  const [page, setPage] = useState(1)
+  const [totalPages, setTotalPages] = useState(1)
 
   const [favourite, set_favourite] = useState<Movie[]>(() => {
     const stored = localStorage.getItem('favourite')
@@ -51,8 +54,9 @@ function Search()
     async function get_movies()
     {
       try{
-        const results = await search_movies(debounced_query)
-        set_movie_result(results)
+        const results = await search_movies(debounced_query, page)
+        set_movie_result(results.results)
+        setTotalPages(results.totalPages)
       }catch(err){
         set_error("Failed to load movies. Please try again.");
         set_movie_result([])
@@ -80,7 +84,7 @@ function Search()
     }else{
       fetch_popular_movies()
     }
-  },[debounced_query])
+  },[debounced_query, page])
 
   function toggle_favourite(movie: Movie) {
     const isAlreadyFavourited = favourite.some(fav => fav.id === movie.id)
@@ -91,8 +95,6 @@ function Search()
       set_favourite(prev => [...prev, movie])
     }
   }
-
-
 
   const movie_card = movie_results.map( data => 
     {
@@ -114,7 +116,17 @@ function Search()
       <section className='search-section'>
         <p>Find <span>Movies</span> You Will Enjoy Without the Hassle</p>
         <div className='search-div'>
-              <input name='search' id='search' placeholder='Search through thousands of movies...' value={query} onChange={(event) => set_query(event.target.value)}/>
+              <input 
+              name='search' 
+              id='search' 
+              placeholder='Search through thousands of movies...' 
+              value={query} 
+              onChange={(event) => 
+              {
+                set_query(event.target.value) 
+                setPage(1)
+              }
+            }/>
         </div>
       </section>
      {!is_loading ? (
@@ -126,8 +138,13 @@ function Search()
       )}
 
       {error && !is_loading && <p className="error">{error}</p>}
+
+      {movie_results.length > 0 && <div className="pagination">
+        <button disabled={page === 1} onClick={() => setPage(p => p - 1)}>Previous</button>
+        <span>Page {page} of {totalPages}</span>
+        <button disabled={page === totalPages} onClick={() => setPage(p => p + 1)}>Next</button>
+      </div>}
     </main>
-    
   )
 }
 

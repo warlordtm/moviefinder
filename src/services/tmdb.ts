@@ -1,16 +1,14 @@
-const BASE_URL = 'https://api.themoviedb.org/3/'
-
-export async function search_movies(query: string)
+export async function search_movies(query: string, page: number = 1)
 {
   if(!query) return [];
 
   try{
     //const url = `${BASE_URL}search/movie?query=${encodeURIComponent(query)}&api_key=${API_KEY}`;
-    const url = `https://api.themoviedb.org/3/search/movie?query=${query}&api_key=422ffb1651fc32e5dac3ce980edb4476`
+    const url = `https://api.themoviedb.org/3/search/movie?query=${query}&api_key=422ffb1651fc32e5dac3ce980edb4476&page=${page}`
     const res = await fetch(url)
     const data = await res.json() 
-    console.log(data.results)
-    return data.results || []
+    console.log(data)
+    return data || []
   }
   catch(error) {
     console.error("Error finding movie", error)
@@ -35,7 +33,7 @@ export async function get_popular_movies()
 
 
 
-export async function get_movie_details(movieId: number) {
+/* export async function get_movie_details(movieId: number) {
   try {
     const res = await fetch(
       `${BASE_URL}movie/${movieId}?api_key=422ffb1651fc32e5dac3ce980edb4476&append_to_response=videos`
@@ -46,4 +44,4 @@ export async function get_movie_details(movieId: number) {
     console.error("Failed to fetch movie details:", err)
     return null
   }
-}
+} */
