@@ -1,8 +1,10 @@
 .privacy, .terms{
-  margin-top: 4rem;
   font-size: 1rem;
   color: white;
-  margin-left: 2rem;
+  position: absolute;
+  left: 2rem;
+  bottom: 10rem;
+  top: 4rem;
 }
 
 .privacy h2, .terms h2{
@@ -10,6 +12,11 @@
   font-weight: bold;
   text-align: center;
   margin-bottom: 2.5rem;
+  margin-left: 35rem;
+}
+
+.privacy h2{
+  margin-left: 25rem;
 }
 
 .privacy p, .terms p{
