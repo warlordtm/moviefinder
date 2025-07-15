@@ -1,10 +1,13 @@
+const BASE_URL = 'https://api.themoviedb.org/3/'
+const API_KEY = '422ffb1651fc32e5dac3ce980edb4476'
+
 export async function search_movies(query: string, page: number = 1)
 {
   if(!query) return [];
 
   try{
     //const url = `${BASE_URL}search/movie?query=${encodeURIComponent(query)}&api_key=${API_KEY}`;
-    const url = `https://api.themoviedb.org/3/search/movie?query=${query}&api_key=422ffb1651fc32e5dac3ce980edb4476&page=${page}`
+    const url = `${BASE_URL}search/movie?query=${encodeURIComponent(query)}&api_key=${API_KEY}&page=${page}`
     const res = await fetch(url)
     const data = await res.json() 
     console.log(data)
