@@ -11,7 +11,7 @@ export default function Terms() {
       <p><span className='span'>4. Disclaimer: </span>We provide info "as is" without guarantees.</p>
       <p><span className='span'>5. Liability: </span>We’re not liable for indirect/consequential issues.</p>
       <p><span className='span'>6. Changes: </span>Continued use means you accept updated terms.</p>
-      <p><span className='span'>7. Contact: </span>legal@moviefinder.app</p>
+      <p><span className='span'>7. Contact: </span>mail.incometree@gmail.com</p>
     </section>
   );
 }
