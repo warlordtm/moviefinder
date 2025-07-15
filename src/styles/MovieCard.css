@@ -1,40 +1,45 @@
-.movie-card-div {
-  width: 12rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  border-radius: 10px;
-  margin: 0.5rem;
-  background-color: #1f1f1f;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  padding-bottom: 0.5rem;
-  box-shadow: 0 0 10px rgba(229, 9, 20, 0.05);
-}
+@import "tailwindcss";
 
-.movie-card-div:hover {
-  background-color: #292929;
-  transform: scale(1.03);
-  box-shadow: 0 0 15px rgba(229, 9, 20, 0.15);
-}
 
-.movie-card-div:active {
-  background-color: #333;
-}
+@layer components{
+  .movie-card-div{
+    @apply w-[12rem] flex flex-col items-center justify-start rounded-[10px] m-2 bg-[#1f1f1f] cursor-pointer transition-colors pb-2
+  }
 
-.movie-card{
-  width: 90%;
-}
+  .movie-card-div{
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 0 10px rgba(229, 9, 20, 0.05);
+  }
 
-.movie-year,
-.movie-title {
-  font-size: 0.85rem;
-  padding: 0.2rem 0.5rem;
-  margin: 0;
-  color: #f1f1f1;
-  text-align: left;
-  width: 100%;
+  .movie-card-div:hover{
+    @apply bg-[#292929]
+  }
+
+  .movie-card-div:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.15);
+  }
+
+  .movie-card-div:active {
+    @apply bg-[#333];
+  }
+
+  .movie-card{
+    @apply w-[90%]
+  }
+
+  .movie-year,
+  .movie-title{
+    @apply text-[.85rem] py-[0.2rem] px-[0.5rem] m-0 text-[#f1f1f1] text-left w-[100%]
+  }
+
+  .movie-title{
+    @apply font-bold text-lg
+  }
+
+  .movie-title{
+    font-size: .8rem;
+  }
 }
 
 .movie-title {

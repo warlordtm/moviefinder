@@ -1,42 +1,35 @@
 @import "tailwindcss";
 
-body{
-  margin: 0;
-  padding: 0;
-  background-color: #121212;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
 
-html, body, #root {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
+@layer base {
+  body {
+    @apply m-0 p-0 bg-[#121212] font-sans
+  }
 
-.main-container {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.main-container > *:last-child {
-  margin-top: auto;
-}
-
-.main{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.movie-card-section{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-  width: 90%;
+  html, body, #root {
+    @apply h-[100%] m-0 p-0
+  }
 }
 
 
+/** For my components **/
+@layer components {
+  .main-container {
+    @apply min-h-[100%] flex-col relative
+  }
+
+  .main-container > *:last-child {
+    @apply mt-[auto]
+  }
+
+ .main{
+    @apply flex flex-col justify-center items-center
+  }
+
+  .movie-card-section{
+    @apply flex justify-center items-center flex-wrap mt-8 w-[90%]
+  }
+}
+
+
+@custom-variant dark (&:where(.dark, .dark *))

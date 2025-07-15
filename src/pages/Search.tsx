@@ -56,7 +56,8 @@ function Search()
       try{
         const results = await search_movies(debounced_query, page)
         set_movie_result(results.results)
-        setTotalPages(results.totalPages)
+        setTotalPages(results.total_pages)
+        console.log(totalPages)
       }catch(err){
         set_error("Failed to load movies. Please try again.");
         set_movie_result([])
@@ -139,7 +140,7 @@ function Search()
 
       {error && !is_loading && <p className="error">{error}</p>}
 
-      {movie_results.length > 0 && <div className="pagination">
+      {movie_results.length > 1 && <div className="pagination">
         <button disabled={page === 1} onClick={() => setPage(p => p - 1)}>Previous</button>
         <span>Page {page} of {totalPages}</span>
         <button disabled={page === totalPages} onClick={() => setPage(p => p + 1)}>Next</button>

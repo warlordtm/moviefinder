@@ -2,8 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 12rem;
+  margin-top: 3rem;
   gap: .8rem;
+  margin-bottom: .6rem;
 }
 
 .pagination button {

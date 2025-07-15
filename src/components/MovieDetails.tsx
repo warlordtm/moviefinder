@@ -6,7 +6,7 @@ export default function MovieDetails() {
   const { title, image, year, isFavourite, rating, overview} = location.state || {}
 
   return (
-    <section className="flex mt-10 mr-8 justify-center items-center ml-8 -space-x-16 max-sm:flex-col max-md:mt-37">
+    <section className="flex mt-13 mr-8 justify-center items-center ml-8 -space-x-16 max-sm:flex-col max-md:mt-37">
       <div className="movie-img-div w-[100%]">
         <img src={image} alt={title} className="w-[100%] rounded-lg h-120 object-cover"/>
       </div>
