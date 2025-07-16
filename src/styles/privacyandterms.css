@@ -3,7 +3,7 @@
 .privacy, .terms{
   @apply text-base text-white mt-20 w-full flex flex-col px-8
 
-  max-sm:text-[.7rem] max-sm:mt-43 max-sm:w-[90%] max-sm:mb-8
+  max-sm:text-[.7rem] max-sm:mt-43 max-sm:w-[90%] max-sm:mb-40
 }
 
 .privacy h2, .terms h2{
