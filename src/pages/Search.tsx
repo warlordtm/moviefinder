@@ -4,8 +4,6 @@ import MovieCard from '../components/MovieCard';
 import { search_movies, get_popular_movies } from '../services/tmdb'
 import { useDebounce } from '../hooks/useDebounce';
 import '../styles/Pagination.css'
-import Footer from '../components/Footer';
-
 
 
 function Search()

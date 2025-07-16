@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .movie-details-section{
-  @apply flex mt-13 mr-8 justify-center items-center ml-8 gap-8 max-sm:flex-col 
+  @apply flex mt-13 mr-8 mb-10 justify-center items-center ml-8 gap-8 max-sm:flex-col 
   
   max-sm:mt-37
 }

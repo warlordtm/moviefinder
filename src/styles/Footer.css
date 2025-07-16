@@ -3,7 +3,7 @@
 
 @layer components{
   .footer{
-    @apply text-white p-2 text-center text-[.9rem] w-full  absolute 
+    @apply text-white p-2 text-center text-[.9rem] w-full  absolute bottom-0
   }
 
   .footer-content{

@@ -17,10 +17,6 @@
     @apply min-h-[100%] flex-col relative
   }
 
-  .main-container > *:last-child {
-    @apply mt-[auto]
-  }
-
  .main{
     @apply flex flex-col justify-center items-center
   }
