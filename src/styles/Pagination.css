@@ -1,22 +1,13 @@
+@import "tailwindcss";
+
 .pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 3rem;
-  gap: .8rem;
-  margin-bottom: 4rem;
+  @apply flex justify-center items-center mt-12 gap-[.8rem] mb-16
 }
 
 .pagination button {
-  padding: 0.2rem .7rem;
-  background: #111;
-  color: white;
-  border: none;
-  border-radius: 7px;
-  cursor: pointer;
+  @apply px-[.7rem] py-[.rem] bg-[#111] text-white rounded-[7px] border-none cursor-pointer
 }
 
 .pagination button:disabled {
-  background: #444;
-  cursor: not-allowed;
+  @apply bg-[#444] cursor-not-allowed;
 }

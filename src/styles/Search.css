@@ -1,59 +1,37 @@
-p {
-  margin: 0;
-  padding: 0;
-}
+@import "tailwindcss";
 
 .search-section {
-  display: flex;
-  flex-direction: column;
-  width: 28rem;
-  justify-content: center;
-  align-items: center;
-  background-color: #1f1f1f; 
-  padding: 2rem;
-  border-radius: 1rem;
-  margin-top: 4.67rem;
+  @apply flex flex-col w-[28rem] justify-center items-center bg-[#1f1f1f]
+  p-8 rounded-2xl mt-[4.67rem]
 }
 
 
 img {
-  margin-top: 1.2rem;
-  margin-bottom: 1.2rem;
-  width: 60%;
+  @apply mt-[1.2rem] mb-[1.2rem] w-[60%] 
 }
 
 
 p {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #f1f1f1;
-  margin-bottom: 1rem;
-  text-align: center;
+  @apply text-2xl font-bold text-[#f1f1f1] mb-4 text-center
 }
 
 
 span {
-  color: blue; 
+  @apply text-blue-500
 }
 
 .search-div {
-  width: 20rem;
-  display: flex;
-  justify-content: space-between;
-  gap: 0.5rem;
+  @apply w-[20rem] flex justify-between gap-2
 }
 
 
 input {
-  background-color: #2a2a2a;
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.3rem;
-  font-size: 0.9rem;
-  color: white;
-  border: 1px solid blue;
-  flex: 1;
+  @apply bg-[#2a2a2a] px-[.75rem] py-[.5rem] rounded-[.3rem] text-base text-white border flex-1
 }
 
+input{
+  border: 1px solid blue;
+}
 
 input::placeholder {
   color: rgba(255, 255, 255, 0.6);
@@ -61,51 +39,44 @@ input::placeholder {
 
 
 button {
-  padding: 0.5rem 1rem;
-  background-color: #e50914;
-  color: white;
-  border: none;
-  border-radius: 0.3rem;
-  font-size: 0.9rem;
-  font-weight: bold;
-  cursor: pointer;
+  @apply px-4 py-2 bg-[#e50914] text-white border-none rounded-[.3rem] text-base font-bold cursor-pointer
+}
+
+button{
   transition: background-color 0.2s ease;
 }
 
 
 button:hover {
-  background-color: #f6121d;
+  @apply bg-[#f6121d]
 }
 
 button:active {
-  background-color: #a9060f;
+  @apply bg-[#a9060f]
 }
 
 
 .no-results {
-  text-align: center;
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: #b3b3b3;
-  margin-top: 2rem;
+  @apply text-center text-[1.25rem] font-medium text-[#b3b3b3] mt-8
+}
+
+.no-results{
   animation: fadeIn 0.4s ease-in-out;
 }
 
 .loading {
-  width: 3rem;
-  height: 3rem;
+  @apply w-[3rem] h-[3rem] rounded-[50%]
+}
+
+.loading{
   border: 4px solid rgba(255, 255, 255, 0.2);
   border-top: 4px solid rgb(85, 85, 184);
-  border-radius: 50%;
   animation: spin 0.8s linear infinite;
   margin: 2rem auto;
 }
 
 .error {
-  color: red;
-  text-align: center;
-  font-weight: bold;
-  margin-top: 1rem;
+  @apply text-red-600 text-center font-bold mt-4
 }
 
 

@@ -6,11 +6,11 @@ export default function MovieDetails() {
   const { title, image, year, isFavourite, rating, overview} = location.state || {}
 
   return (
-    <section className="flex mt-13 mr-8 justify-center items-center ml-8 -space-x-16 max-sm:flex-col max-md:mt-37">
-      <div className="movie-img-div w-[70%]">
-        <img src={image} alt={title} className="w-[100%] rounded-lg h-130 object-cover"/>
+    <section className="movie-details-section">
+      <div className="movie-img-div">
+        <img src={image} alt={title} className="movie-image"/>
       </div>
-      <div className="movie-details -ml-25 max-md:flex-col max-md:ml-4">
+      <div className="movie-details">
         <h2><strong>TITLE: </strong>{title}</h2>
         <p className="movie-release-year"><strong>RELEASED: </strong> {year}</p>
         <p className="movie-rating"><strong>RATING: ⭐ </strong> {Math.round(rating * 10)/10}</p>

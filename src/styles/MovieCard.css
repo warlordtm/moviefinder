@@ -43,48 +43,32 @@
 }
 
 .movie-title {
-  font-weight: 600;
-  font-size: .8rem;
+  @apply font-medium text-[.8rem]
 }
 
 section {
-  position: relative;
+  @apply relative;
 }
 
 .img-div,
 .img-div > img {
-  width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  margin-bottom: .5em;
+  @apply w-full rounded-tl-[10px] rounded-tr-[10px] mb-2
 }
 
 .img-div > img {
-  object-fit: cover;
-  height: 220px;
+  @apply object-cover h-[220px]
 }
 
 .movie-details {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-  margin-bottom: .85rem;
+  @apply flex flex-col items-start w-full mb-[.85rem]
+}
+
+
+.favourite{
+  @apply absolute top-2 right-2 bg-[#1a1a1a] rounded-[50%] w-8 h-8 flex justify-center items-center text-white text-[1.1rem]
 }
 
 .favourite {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  background-color: #1a1a1a;
-  border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 1.1rem;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s ease;
 }
@@ -95,14 +79,9 @@ section {
 }
 
 .movie-attributes{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: .2rem;
+  @apply flex justify-center items-center gap-[.2rem]
 }
 
 .movie-attributes div{
-  font-weight: 400;
-  font-size: .85rem;
-  color: white;
+  @apply font-light text-[.85rem] text-white
 }

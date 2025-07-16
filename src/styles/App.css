@@ -12,7 +12,6 @@
 }
 
 
-/** For my components **/
 @layer components {
   .main-container {
     @apply min-h-[100%] flex-col relative

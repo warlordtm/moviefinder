@@ -1,33 +1,22 @@
+@import "tailwindcss";
+
 .privacy, .terms{
-  font-size: 1rem;
-  color: white;
-  position: absolute;
-  left: 2rem;
-  bottom: 10rem;
-  top: 4rem;
+  @apply text-base text-white absolute left-8 bottom-40 top-16
 }
 
 .privacy h2, .terms h2{
-  font-size: 1rem;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 2.5rem;
-  margin-left: 35rem;
+  @apply text-base font-bold text-center mb-10 ml-[35rem]
 }
 
 .privacy h2{
-  margin-left: 25rem;
+  @apply ml-[25rem]
 }
 
 .privacy p, .terms p{
-  font-size: 1rem;
-  font-weight: 300;
-  text-align: left;
-  margin: .4rem;
-  margin-bottom: 1rem;
+  @apply text-base font-light text-left m-[.4rem] mb-4
 }
 
 .span{
-  font-weight: 900;
+  @apply font-extrabold
 }
 

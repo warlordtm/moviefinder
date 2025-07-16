@@ -1,13 +1,16 @@
-.favourites-section {
-  margin-top: 2rem;
-}
+@import "tailwindcss";
 
-.favourites-section h2 {
-  color: white;
-  text-align: center;
-  margin-bottom: 1rem;
-}
 
-.h1{
-  color: white;
+@layer components{
+  .favourites-section{
+    @apply mt-8
+  }
+
+  .favourites-section h2{
+    @apply text-white text-center mb-4
+  }
+
+  .h1{
+    @apply text-white
+  }
 }

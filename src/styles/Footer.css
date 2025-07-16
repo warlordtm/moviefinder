@@ -1,40 +1,30 @@
-.footer {
-  color: white;
-  padding: .5rem;
-  text-align: center;
-  font-size: 0.9rem;
-  width: 100%;
-  position: absolute;
-  bottom: 0
-}
+@import "tailwindcss";
 
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.footer-links {
-  display: flex;
-  gap: 1.5rem;
-}
+@layer components{
+  .footer{
+    @apply text-white p-2 text-center text-[.9rem] w-full absolute bottom-0
+  }
 
-.footer-links a {
-  color: rgba(253, 253, 253, 0.548);
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.7rem;
-}
+  .footer-content{
+    @apply flex flex-col items-center
+  }
 
-.footer-links a:hover {
-  color: rgba(255, 255, 255, 0.781);
-  text-decoration: underline;
+  .footer-links{
+    @apply flex gap-6
+  }
+
+  .footer-links a{
+    @apply text-[#fdfdfd8c] decoration-0 font-medium text-[.7rem]
+  }
+
+  .footer-links a:hover{
+    @apply text-[#ffffffc7] underline
+  }
 }
 
 .footer-copyright{
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 0.2rem;
+  @apply text-base font-medium mb-[.2rem]
 }
 
 

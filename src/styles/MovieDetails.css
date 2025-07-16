@@ -1,8 +1,18 @@
+@import "tailwindcss";
+
+.movie-details-section{
+  @apply flex mt-13 mr-8 justify-center items-center ml-8 gap-8 max-sm:flex-col max-md:mt-37
+}
+
+.movie-img-div{
+  @apply w-[30%]
+}
+
+.movie-image{
+  @apply w-[100%] rounded-2xl
+}
+
 .movie-release-year, .movie-rating, .movie-overview, .movie-details h2{
-  font-size: 1.2rem;
-  font-weight: 300;
-  text-align: left;
-  color: white;
-  margin: 1rem;
+  @apply text-[1.2rem] font-light text-left text-white m-4
 }
  
