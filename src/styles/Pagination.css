@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .pagination {
-  @apply flex justify-center items-center mt-12 gap-[.8rem] mb-16
+  @apply flex justify-center items-center mt-12 gap-[.8rem] mb-7
 }
 
 .pagination button {
