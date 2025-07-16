@@ -14,7 +14,7 @@ export default function Privacy() {
       <p><span className='span'>4. Third-Party Services:</span> Like Google Analytics for traffic insights.</p>
       <p><span className='span'>5. Data Security:</span> We apply reasonable protection methods.</p>
       <p><span className='span'>6. Policy Updates:</span> Changes will be posted here.</p>
-      <p><span className='span'>7. Contact:</span> Email us at support@moviefinder.app</p>
+      <p><span className='span'>7. Contact:</span> Email us at mail.incometree@gmail.com</p>
     </section>
   );
 }
