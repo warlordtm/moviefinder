@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 .search-section {
-  @apply flex flex-col w-[28rem] justify-center items-center bg-[#1f1f1f]
+  @apply flex flex-col w-[70%] justify-center items-center bg-[#1f1f1f]
   p-8 rounded-2xl mt-[4.67rem]
+
+  max-sm:mt-41
 }
 
 
@@ -13,6 +15,8 @@ img {
 
 p {
   @apply text-2xl font-bold text-[#f1f1f1] mb-4 text-center
+
+  max-sm:text-[1rem] 
 }
 
 
@@ -22,11 +26,15 @@ span {
 
 .search-div {
   @apply w-[20rem] flex justify-between gap-2
+
+  max-sm:w-[80%]
 }
 
 
 input {
   @apply bg-[#2a2a2a] px-[.75rem] py-[.5rem] rounded-[.3rem] text-base text-white border flex-1
+
+  max-sm:text-[.7rem] max-sm:w-full max-sm:truncate
 }
 
 input{

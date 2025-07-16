@@ -5,7 +5,13 @@
 }
 
 .pagination button {
-  @apply px-[.7rem] py-[.rem] bg-[#111] text-white rounded-[7px] border-none cursor-pointer
+  @apply px-[.7rem] py-[.5rem] bg-[#111] text-white rounded-[7px] border-none cursor-pointer
+
+  max-sm:px-[.5rem] max-sm:py-[.3rem] text-sm
+}
+
+.pagination span{
+  @apply max-sm:text-sm
 }
 
 .pagination button:disabled {

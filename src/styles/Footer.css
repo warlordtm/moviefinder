@@ -3,7 +3,7 @@
 
 @layer components{
   .footer{
-    @apply text-white p-2 text-center text-[.9rem] w-full absolute bottom-0
+    @apply text-white p-2 text-center text-[.9rem] w-full  absolute -bottom-20
   }
 
   .footer-content{
@@ -16,6 +16,8 @@
 
   .footer-links a{
     @apply text-[#fdfdfd8c] decoration-0 font-medium text-[.7rem]
+
+    max-sm:text-[.7rem]
   }
 
   .footer-links a:hover{
@@ -25,6 +27,8 @@
 
 .footer-copyright{
   @apply text-base font-medium mb-[.2rem]
+
+  max-sm:text-[.8rem]
 }
 
 

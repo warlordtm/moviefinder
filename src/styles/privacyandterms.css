@@ -1,19 +1,20 @@
 @import "tailwindcss";
 
 .privacy, .terms{
-  @apply text-base text-white absolute left-8 bottom-40 top-16
+  @apply text-base text-white absolute left-3 bottom-40 top-16
+
+  max-sm:text-[.7rem] max-sm:mt-28 max-sm:w-[90%]
 }
 
 .privacy h2, .terms h2{
-  @apply text-base font-bold text-center mb-10 ml-[35rem]
+  @apply text-base font-bold text-center mb-10
 }
 
-.privacy h2{
-  @apply ml-[25rem]
-}
 
 .privacy p, .terms p{
   @apply text-base font-light text-left m-[.4rem] mb-4
+
+  max-sm:text-[.8rem]
 }
 
 .span{

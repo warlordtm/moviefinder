@@ -3,7 +3,10 @@
 
 @layer components{
   .movie-card-div{
-    @apply w-[12rem] flex flex-col items-center justify-start rounded-[10px] m-2 bg-[#1f1f1f] cursor-pointer transition-colors pb-2
+    @apply w-[12rem] flex flex-col items-center justify-start rounded-[10px] 
+    m-2 bg-[#1f1f1f] cursor-pointer transition-colors pb-2
+
+    max-sm:w-[14rem] h-[21rem]
   }
 
   .movie-card-div{
@@ -12,7 +15,9 @@
   }
 
   .movie-card-div:hover{
-    @apply bg-[#292929]
+    @apply bg-[#292929] 
+
+    max-sm:w-[17rem]
   }
 
   .movie-card-div:hover {
