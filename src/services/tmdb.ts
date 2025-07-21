@@ -21,7 +21,6 @@ export async function search_movies(query: string, page: number = 1)
     const url = `${BASE_URL}search/movie?query=${encodeURIComponent(query)}&api_key=${API_KEY}&page=${page}`
     const res = await fetch(url)
     const data = await res.json() 
-    console.log(data)
     return data || []
   }
   catch(error) {
