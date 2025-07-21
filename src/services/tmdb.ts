@@ -9,7 +9,7 @@ interface ImportMeta {
 }
 
 
-const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
+const API_KEY:ImportMeta = import.meta.env.VITE_TMDB_API_KEY;
 const BASE_URL = 'https://api.themoviedb.org/3/'
 
 
