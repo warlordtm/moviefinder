@@ -56,7 +56,6 @@ function Search()
         const results = await search_movies(debounced_query, page)
         set_movie_result(results.results)
         setTotalPages(results.total_pages)
-        console.log(totalPages)
       }catch(err){
         set_error("Failed to load movies. Please try again.");
         set_movie_result([])
