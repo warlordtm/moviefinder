@@ -113,7 +113,7 @@ function Search()
   return(
     <main className='main'>
       <section className='search-section'>
-        <p>Find <span>Movies</span> You Will Enjoy Without the Hassle</p>
+        <p>Discover and <span>Explore</span> Your Favourite <span>Movies</span> Like Never Before With our Intuitive Movie Search App</p>
         <div className='search-div'>
               <input 
               name='search' 

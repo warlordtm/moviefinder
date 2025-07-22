@@ -14,7 +14,8 @@
 
 @layer components {
   .main-container {
-    @apply min-h-[100%] flex-col relative
+    @apply min-h-[100%] flex-col relative 
+    sm:items-center sm:justify-center
   }
 
  .main{
